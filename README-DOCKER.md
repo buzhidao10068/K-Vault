@@ -267,6 +267,7 @@ docker compose up -d --build
 
 说明：最新版本会在启动时自动补齐缺失的 env bootstrap 存储配置；不重启不会生效。
 
+
 ### 6) 变量名兼容清单（Docker）
 
 - HuggingFace token：`HF_TOKEN` / `HUGGINGFACE_TOKEN` / `HF_API_TOKEN`
