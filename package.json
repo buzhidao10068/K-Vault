@@ -11,7 +11,8 @@
     "pages:deploy": "npx wrangler pages deploy .",
     "docker:init-env": "node scripts/bootstrap-env.js",
     "server:dev": "npm --prefix server run dev",
-    "docker:up": "npm run docker:init-env && docker compose up -d --build",
+    "docker:build": "docker build -t k-vault:local .",
+    "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
     "docker:doctor": "node scripts/docker-storage-doctor.js",
     "docker:smoke:ci": "node scripts/docker-ci-smoke.js",
@@ -23,7 +24,7 @@
   },
   "devDependencies": {
     "concurrently": "^10.0.3",
-    "hono": "^4.12.23",
+    "hono": "^4.12.25",
     "mocha": "^11.7.6",
     "wait-on": "^9.0.10",
     "wrangler": "^4.98.0"
